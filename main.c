@@ -1,34 +1,16 @@
 #include <stdio.h>
 
-/*int main(void) 
-{
-	int  i;
-	
-	for(i=0; i<10; i++)
-		printf("*");
-	for(i=0; i<10; i++)
-		printf("*");
-	for(i=0; i<10; i++)
-		printf("*");
+void func(void) {
+	int x;
+	printf("func x is at %p\n", &x);
+}
+
+int main(void) {
+	int x;
+	printf("main x is at %p\n", &x);
+	func();
 	
 	return 0;
 }
-*/
-
-void print_star()
-{
-	int  i;
-	for(i=0; i<10; i++)
-		printf("*");
-}
-	
-int main(void)
-{
-	print_star();
-	print_star();
-	print_star();
-		
-	return 0;
-}
-
+//함수 실행시 메모리 상태 관찰 
 
