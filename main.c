@@ -1,31 +1,31 @@
 #include <stdio.h>
-#include<string.h>
 
-long long fact(int num) {
-	if (num == 1 || num == 0) {
-		return 1;
-	}
-	return num * fact(num - 1);
+int sumTwo( int a, int b )
+{
+	int output;
+	output = a + b;
+	return output;
 }
-int combi(int n, int r) {
-	if (n == r) {
-		return 1;
-	}
-	int a = fact(n);
-	int b = fact(r);
-	int c = fact(abs(n - r));
-	return a / (b*c);
+//두개의 정수를 더하는 함수
+
+int square(int n)
+{
+	return (n * n);
 }
-int main() {
-	int n, r, res;
+//정수의 제곱을 계산하는 함수
+ 
+int get_max( int x, int y )
+{
+	if ( x > y ) return (x);
+	else return (y);
+}
+//두개의 정수 중에서 큰 수를 계산하는 함수
 
-	printf("두 정수를 입력하시오: ");
-	scanf("%d %d", &n, &r);
-
-	res = combi(n, r);
-	printf("c(%d, %d) = %d", n, r, res);
-
-
-	return 0;
+int main(void){
+	
+	int result;
+	result = square(5);
+	printf("%d",result);
+	
 }
 
